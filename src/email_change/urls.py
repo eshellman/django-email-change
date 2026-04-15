@@ -24,7 +24,7 @@
 #  limitations under the License.
 #
 
-from django.conf.urls import url
+from django.urls import re_path as url
 from django.views.generic import TemplateView
 from .views import email_change_view, email_verify_view
 

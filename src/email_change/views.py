@@ -129,7 +129,7 @@ def email_verify_view(request, verification_key, extra_context={},
         if ecr.has_expired():
             ecr.delete()
             # Return failure response
-            return render_to_response(request, template_name, extra_context)
+            return render(request, template_name, extra_context)
 
         # Success. Replace the user's email with the new email
         request.user.email = ecr.email

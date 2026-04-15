@@ -52,7 +52,7 @@ class EmailChangeRequest(models.Model):
             self.verification_key = generate_key(self.user, self.email)
         return super(EmailChangeRequest, self).save(*args, **kwargs)
 
-    def __unicode__(self):
+    def __str__(self):
         return '(%s) %s --> %s' % (self.user.username, self.user.email,
                                    self.email)
 
